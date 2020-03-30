@@ -1,5 +1,8 @@
-<app-header titulo='Alert'></app-header>
+<app-header [titulo]='titulo || "Alert"'></app-header>
 
 <ion-content>
+    <ion-button (click)="presentAlert()">Alert</ion-button>
+
+    <ion-button (click)="presentAlertPrompt()">Alert 2</ion-button>
 
 </ion-content>

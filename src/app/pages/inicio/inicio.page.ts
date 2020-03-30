@@ -17,6 +17,11 @@ export class InicioPage implements OnInit {
       icon: 'American-Football',
       name: 'Action Sheet',
       redirectTo: '/action-sheet'
+    },
+    {
+      icon: 'American-Football',
+      name: 'avatar',
+      redirectTo: '/avatar'
     }
   ];
 
