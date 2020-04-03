@@ -29,9 +29,14 @@ export class InicioPage implements OnInit {
       redirectTo: '/botones'
     },
      {
-      icon: 'American-Football',
+      icon: 'card',
       name: 'Card',
       redirectTo: '/card'
+    },
+    {
+      icon: 'American-Football',
+      name: 'CheckBox',
+      redirectTo: '/check'
     }
   ];
 
