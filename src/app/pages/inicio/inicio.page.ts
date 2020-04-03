@@ -37,6 +37,11 @@ export class InicioPage implements OnInit {
       icon: 'American-Football',
       name: 'CheckBox',
       redirectTo: '/check'
+    },
+    {
+      icon: 'American-Football',
+      name: 'dateTime',
+      redirectTo: '/date-time'
     }
   ];
 
