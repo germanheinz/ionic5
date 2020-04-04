@@ -42,6 +42,11 @@ export class InicioPage implements OnInit {
       icon: 'American-Football',
       name: 'dateTime',
       redirectTo: '/date-time'
+    },
+    {
+      icon: 'American-Football',
+      name: 'fab',
+      redirectTo: '/fab'
     }
   ];
 
