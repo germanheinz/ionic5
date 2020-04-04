@@ -52,6 +52,11 @@ export class InicioPage implements OnInit {
       icon: 'American-Football',
       name: 'infinite-Scroll',
       redirectTo: '/infinite-scroll'
+    },
+    {
+      icon: 'American-Football',
+      name: 'input',
+      redirectTo: '/input'
     }
   ];
 
