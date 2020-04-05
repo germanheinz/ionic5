@@ -57,6 +57,11 @@ export class InicioPage implements OnInit {
       icon: 'American-Football',
       name: 'input',
       redirectTo: '/input'
+    },
+    {
+      icon: 'American-Football',
+      name: 'Reorder',
+      redirectTo: '/reorder'
     }
   ];
 

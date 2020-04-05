@@ -1,0 +1,31 @@
+<ion-header no-border>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/">
+
+            </ion-back-button>
+        </ion-buttons>
+        <ion-title>reorder</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+    <ion-list>
+        <!-- Esta etiqueta debajo marca los items que se quieran mover -->
+        <ion-reorder-group [disabled]='false' (ionItemReorder)="reorder($event)">
+            <ion-item *ngFor="let heroe of heroes">
+                <ion-label>
+                    {{heroe}}
+                </ion-label>
+                <ion-reorder slot="end"></ion-reorder>
+            </ion-item>
+        </ion-reorder-group>
+    </ion-list>
+
+    <ion-button expand=full (click)="onClick()">
+        Save
+    </ion-button>
+
+</ion-content>
