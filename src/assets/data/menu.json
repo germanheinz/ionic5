@@ -52,5 +52,10 @@
         "icon": "list",
         "name": "Listas - Reorder",
         "redirectTo": "/reorder"
+    },
+    {
+        "icon": "body",
+        "name": "popover",
+        "redirectTo": "/popover"
     }
 ]
