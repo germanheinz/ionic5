@@ -1,9 +1,21 @@
-<app-header titulo='Inicio'></app-header>
+<ion-header no-border>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <!-- 1 Way to do it -->
+            <!-- <ion-button (click)="toggleMenu()">
+                <ion-icon slot="icon-only" name="menu"></ion-icon>
+            </ion-button> -->
+            <!-- 2 Way to do it -->
+            <ion-menu-button color="primary" menu="firstMenu"></ion-menu-button>
+        </ion-buttons>
+        <ion-title text-primary>Components</ion-title>
 
+    </ion-toolbar>
+</ion-header>
 <ion-content>
     <ion-list>
-        <ion-item *ngFor="let c of components" [routerLink]="c.redirectTo" detail>
-            <ion-icon slot="start" [name]="c.icon"></ion-icon>
+        <ion-item *ngFor="let c of components | async" [routerLink]="c.redirectTo" detail>
+            <ion-icon slot="start" [name]="c.icon" color="primary"></ion-icon>
             <ion-label>{{c.name}}</ion-label>
         </ion-item>
     </ion-list>

@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuController } from '@ionic/angular';
+import { Components } from '../../interfaces/interfaces';
+import { ServiceService } from '../../services/service.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-inicio',
@@ -7,71 +11,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InicioPage implements OnInit {
 
-  components: Components[] = [
-    {
-      icon: 'American-Football',
-      name: 'Alert',
-      redirectTo: '/alert'
-    },
-    {
-      icon: 'American-Football',
-      name: 'Action Sheet',
-      redirectTo: '/action-sheet'
-    },
-    {
-      icon: 'American-Football',
-      name: 'avatar',
-      redirectTo: '/avatar'
-    },
-    {
-      icon: 'American-Football',
-      name: 'botones',
-      redirectTo: '/botones'
-    },
-     {
-      icon: 'card',
-      name: 'Card',
-      redirectTo: '/card'
-    },
-    {
-      icon: 'American-Football',
-      name: 'CheckBox',
-      redirectTo: '/check'
-    },
-    {
-      icon: 'American-Football',
-      name: 'dateTime',
-      redirectTo: '/date-time'
-    },
-    {
-      icon: 'American-Football',
-      name: 'fab',
-      redirectTo: '/fab'
-    },
-    {
-      icon: 'American-Football',
-      name: 'infinite-Scroll',
-      redirectTo: '/infinite-scroll'
-    },
-    {
-      icon: 'American-Football',
-      name: 'input',
-      redirectTo: '/input'
-    },
-    {
-      icon: 'American-Football',
-      name: 'Reorder',
-      redirectTo: '/reorder'
-    }
-  ];
+  components: Observable<Components[]>;
 
-  constructor() { }
+  constructor(private menuController: MenuController, private dataService: ServiceService) { }
 
   ngOnInit() {
+    this.components = this.dataService.getMenuOpts();
   }
-}
-interface Components {
-  icon: string;
-  name: string;
-  redirectTo: string;
+
+  toggleMenu() {
+    this.menuController.toggle();
+  }
+
 }
