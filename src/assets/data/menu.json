@@ -54,8 +54,8 @@
         "redirectTo": "/reorder"
     },
     {
-        "icon": "body",
-        "name": "popover",
-        "redirectTo": "/popover"
+        "icon": "search",
+        "name": "search",
+        "redirectTo": "/search"
     }
 ]

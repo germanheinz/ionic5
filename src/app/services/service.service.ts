@@ -13,6 +13,9 @@ export class ServiceService {
     // Agrego al get pico Components para indicarle que tipo va a devolver
     return this.http.get<Components[]>('/assets/data/menu.json');
   }
-
+  getAlbums() {
+    // Agrego al get pico Components para indicarle que tipo va a devolver
+    return this.http.get<any[]>('/assets/data/search.json');
+  }
 
 }

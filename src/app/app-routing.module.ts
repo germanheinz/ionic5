@@ -53,6 +53,10 @@ const routes: Routes = [
   {
     path: 'popover',
     loadChildren: () => import('./pages/popover/popover.module').then( m => m.PopoverPageModule)
+  },
+  {
+    path: 'search',
+    loadChildren: () => import('./pages/search/search.module').then( m => m.SearchPageModule)
   }
 
 
