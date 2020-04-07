@@ -57,5 +57,10 @@
         "icon": "search",
         "name": "search",
         "redirectTo": "/search"
+    },
+    {
+        "icon": "cog",
+        "name": "tabs",
+        "redirectTo": "/tabs/avatar"
     }
 ]
